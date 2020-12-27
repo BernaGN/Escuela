@@ -17,11 +17,11 @@ class Career extends Model
 
     public function students()
     {
-        return $this->hasMany('App\Models\Student');
+        return $this->hasMany(Student::class);
     }
 
     public function faculty()
     {
-        return $this->belongsTo('App\Models\Faculty');
+        return $this->belongsTo(Faculty::class);
     }
 }

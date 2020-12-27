@@ -17,6 +17,6 @@ class Faculty extends Model
     ];
 
     public function careers() {
-        return $this->hasMany('App\Models\Career');
+        return $this->hasMany(Career::class);
     }
 }

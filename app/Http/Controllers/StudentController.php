@@ -14,7 +14,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students = Student::firstHundredRecords()->get();
+        $students = Student::firstRecords(100)->simplepaginate(50);
         return view('index', compact('students'));
     }
 

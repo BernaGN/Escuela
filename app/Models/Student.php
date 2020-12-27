@@ -19,11 +19,11 @@ class Student extends Model
 
     public function career()
     {
-        return $this->belongsTo('App\Models\Career');
+        return $this->belongsTo(Career::class);
     }
 
-    public function scopeFirstHundredRecords($query)
+    public function scopeFirstRecords($query, $num)
     {
-        return $query->where('id', '<=', 100);
+        return $query->where('id', '<=', $num);
     }
 }
