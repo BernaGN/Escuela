@@ -15,4 +15,8 @@ class Faculty extends Model
         'code',
         'name',
     ];
+
+    public function careers() {
+        return $this->hasMany('App\Models\Career');
+    }
 }

@@ -14,4 +14,14 @@ class Career extends Model
         'name',
         'faculty_id',
     ];
+
+    public function students()
+    {
+        return $this->hasMany('App\Models\Student');
+    }
+
+    public function faculty()
+    {
+        return $this->belongsTo('App\Models\Faculty');
+    }
 }

@@ -16,4 +16,14 @@ class Student extends Model
         'birthday',
         'career_id',
     ];
+
+    public function career()
+    {
+        return $this->belongsTo('App\Models\Career');
+    }
+
+    public function scopeFirstHundredRecords($query)
+    {
+        return $query->where('id', '<=', 100);
+    }
 }
